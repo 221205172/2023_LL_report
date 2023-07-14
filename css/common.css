@@ -63,6 +63,27 @@ img {
     font-family: 'Cherry Bomb One', cursive;
 }
 
+@media (max-width: 800px) {/*800px以下でメニュー項目を縦並びに*/
+    .site-menu ul {
+      display: block;
+      text-align: center;
+    }
+
+    .site-menu li {
+        margin-top: 20px;
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+    }
+}
+  
 .footer {
     color: #ffffff;/*フッターの文字と背景の色を指定*/
     background-color: #24211b;
