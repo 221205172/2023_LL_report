@@ -1,5 +1,47 @@
 @charset "utf-8";/*文字コードを指定*/
 
+.first-view {
+    /* height: calc(100vh – 110px); */
+    height: 500px;
+    background: url(../images/common/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}  
+
+.first-view-text {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4b2c14;
+
+}
+
+.first-view-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    line-height: 72px;
+}  
+
+.first-view-text p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+  
+.lead {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+  
 *,
 ::before,
 ::after {/*余白の設定をリセット*/
@@ -34,8 +76,8 @@ img {
     height: 110px;
     margin-left: auto;/*ヘッダの余白を左右均等に*/
     margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
     display: flex;/*ロゴとナビゲーションを横並びにする*/
     justify-content: space-between;
     align-items: center;
@@ -113,6 +155,18 @@ img {
         display: block;
     }
 
+    .main {
+        padding-top: 50px;;
+    }
+
+    .first-view-text{
+        padding-top: 100px;
+    }
+
+    .writer {
+        margin-top: 0px;
+    }
+
     .toggle-menu-button {
         display: block;
         width: 44px;
@@ -129,14 +183,6 @@ img {
     }
 }
 
-.main{
-    height: 200px;
-    background-image: url("../images/common/background.jpg");/*背景の画像を指定*/
-    background-size: cover;
-    padding-top: 50px;
-    
-}
-
 .footer {
     color: #ffffff;/*フッターの文字と背景の色を指定*/
     background-color: #24211b;
@@ -148,11 +194,11 @@ img {
     align-items: center;/*各要素を中央に並べる*/
 }
 
-.footer-logo {
-    display: block;/*フッターロゴのサイズ調整*/
-    width: 235px;
-    margin-top: 90px;/*フッターロゴの余白調整*/
-}
+/* .footer-logo { */
+    /* display: block;フッターロゴのサイズ調整 */
+    /* width: 235px; */
+    /* margin-top: 90px;フッターロゴの余白調整 */
+/* } */
 
 .writer {/*作成者のスタイル調整*/
     font-size: 14px;
