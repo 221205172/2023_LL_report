@@ -1,42 +1,33 @@
-@charset "utf-8";/*文字コードを指定*/
-
-.first-view {
-    /* height: calc(100vh – 110px); */
-    height: 500px;
-    width: 500px;
+.title {
+    height: 400px;
+    background-image: url(../images/dog/bg_main.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}  
-
-.first-view-text {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    /* padding-left: 40px; */
-    /* padding-right: 40px; */
-    padding-bottom: 80px;
-    /* color: #ffffff; */
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #c2bab5;
-
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.first-view-text h1 {
+.title h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 56px;
-    line-height: 72px;
-}  
-
-.first-view-text p {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 32pt;
+    font-weight: bold;
 }
-  
-.lead {
-    max-width: 1200px;
-    margin: 60px auto;
+
+.title p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.main {
+    background-image: url(../images/index/bg_main.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .feature {
@@ -44,185 +35,84 @@
     justify-content: space-between;
     width: 930px;
     max-width: 90%;
-    margin-top: 0px;
+    margin-top: 75px;
     margin-left: auto;
     margin-right: auto;
     align-items: flex-start;
-    
+}
+
+.feature-text {
+    max-width: 500px;
 }
 
 .feature img {
-    height: 200px;
-    margin: auto;
+    height: 300px;
+    margin-right: 80px;
 }
 
-*,
-::before,
-::after {/*余白の設定をリセット*/
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.reverse img {
+    margin-left: 80px;
+    margin-bottom: 40px;
 }
 
-ul, ol {/*リストの項目の頭にマークをつけない*/
-    list-style: none;
+.reverse {
+    flex-direction: row-reverse;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;/*リンクの下線を付けない*/
+.reverse .feature-text {
+    margin-left: 40px;
+    margin-right: 0;
 }
 
-body {
-    font-family: sans-serif;/*テキストのファントを設定*/
-    font-size: 16pt;/*フォントサイズを指定*/
-    color: #000000;
-    line-height: 1;
-    background-color: #ffffff;/*背景色を指定*/
-}
-
-.main{
-    background: url(../images/common/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-img {
-    max-width: 100%;/*画像の表示の幅*/
-}
-
-.header-inner {/*.でクラス名を指定*/
-    max-width: 1200px;
-    height: 110px;
-    margin-left: auto;/*ヘッダの余白を左右均等に*/
-    margin-right: auto;
-    padding-left: 80px;
-    padding-right: 80px;
-    display: flex;/*ロゴとナビゲーションを横並びにする*/
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle-menu-button {/*ハンバーガーメニューを非表示に*/
-    display: none;
-}
-
-.header-logo {/*ロゴの幅を指定できるように*/
-    display: block;
-    width: 170px;/*ロゴのサイズ指定*/
-}
-
-.site-menu ul {/*ナビゲーションを横並びにする*/
-    display: flex;
-}
-
-.site-menu ul li {/*ナビゲーションの項目間に余白*/
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.site-menu ul li a {
-    font-family: 'Cherry Bomb One', cursive;
-}
-
-@media (max-width: 800px) {/*800px以下でメニュー項目を縦並びに*/
-    .site-menu ul {
-      display: block;
-      text-align: center;
-    }
-
-    .site-menu li {
-        margin-top: 20px;
-    }
-    
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        height: 50px;
-        z-index: 10;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-inner {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 100%;
-        position: relative;
-
-    }
-    
-    .header-logo {
-        width: 100px;
-    }
-    
-    .header-site-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        display: none;
-
-    }
-
-    .header-site-menu.is-show {
-        display: block;
-    }
-
-    .main {
-        padding-top: 50px;;
-    }
-
-    .first-view-text{
-        padding-top: 100px;
-    }
-
-    .writer {
-        margin-top: 0px;
-    }
-
-    .toggle-menu-button {
-        display: block;
-        width: 44px;
-        height: 34px;
-        background-image: url(../images/common/icon-menu.png);
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;    
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        outline: none;
-
-    }
-}
-
-.footer {
-    color: #ffffff;/*フッターの文字と背景の色を指定*/
-    background-color: #24211b;
-    padding-top: 30px;/*フーターの内側上下の余白を指定*/
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;/*フッター内の各要素の並び方を指定
-    90度回転させて横並びに*/
-    align-items: center;/*各要素を中央に並べる*/
-}
-
-/* .footer-logo { */
-    /* display: block;フッターロゴのサイズ調整 */
-    /* width: 235px; */
-    /* margin-top: 90px;フッターロゴの余白調整 */
-/* } */
-
-.writer {/*作成者のスタイル調整*/
-    font-size: 14px;
+.feature-text h2 {
+    font-size: 22px;
     font-weight: bold;
-    margin-top: 90px;
+    line-height: 30px;
+}
+
+.feature-text h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+}
+
+.feature-text p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+@media (max-width: 800px) {
+    .title {
+        height: 180px;
+        background-position: center top;
+    }
+
+    .feature-text {
+        max-width: 180px;
+    }
+
+    .feature-text h2 {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 18px;
+    }
+
+    .feature-text p {
+        font-size: 10px;
+        line-height: 18px;
+        margin-top: 15px;
+    }
+
+    .feature img {
+        max-height: 200px;
+        margin-right: 0;
+    }
+
+    .reverse img {
+        margin-left: 0;
+    }
 }
